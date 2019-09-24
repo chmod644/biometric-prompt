@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Example Foreground Service</string>
+    <string name="uploading_data">Uploading Data</string>
+    <string name="message_start_service">Service starting</string>
+    <string name="message_finish_service">Service finished</string>
+    <string name="notification_message">Uploading data</string>
+    <string name="notify_name">Upload data</string>
+    <string name="notify_description">Upload dummy data in 5sec</string>
 </resources>
