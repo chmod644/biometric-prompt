@@ -6,8 +6,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.fragment.findNavController
 
 import com.example.sandbox.R
+import kotlinx.android.synthetic.main.first_fragment.*
+import kotlinx.android.synthetic.main.main_fragment.*
 
 class FirstFragment : Fragment() {
 
@@ -27,7 +30,11 @@ class FirstFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(FirstViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        // Set view listener
+        buttonToSecond.setOnClickListener {
+            findNavController().navigate(R.id.action_firstFragment_to_secondFragment)
+        }
     }
 
 }

@@ -36,5 +36,11 @@
         android:id="@+id/thirdFragment"
         android:name="com.example.sandbox.ui.main.ThirdFragment"
         android:label="third_fragment"
-        tools:layout="@layout/third_fragment" />
+        tools:layout="@layout/third_fragment" >
+        <action
+            android:id="@+id/action_thirdFragment_to_mainFragment"
+            app:destination="@id/mainFragment"
+            app:popUpTo="@+id/mainFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
 </navigation>
