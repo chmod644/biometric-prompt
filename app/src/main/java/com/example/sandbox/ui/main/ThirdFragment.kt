@@ -7,31 +7,33 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.sandbox.R
-import kotlinx.android.synthetic.main.main_fragment.*
 
-class MainFragment : Fragment() {
+import com.example.sandbox.R
+import kotlinx.android.synthetic.main.first_fragment.*
+import kotlinx.android.synthetic.main.third_fragment.*
+
+class ThirdFragment : Fragment() {
 
     companion object {
-        fun newInstance() = MainFragment()
+        fun newInstance() = ThirdFragment()
     }
 
-    private lateinit var viewModel: MainViewModel
+    private lateinit var viewModel: ThirdViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View {
-        return inflater.inflate(R.layout.main_fragment, container, false)
+    ): View? {
+        return inflater.inflate(R.layout.third_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
+        viewModel = ViewModelProviders.of(this).get(ThirdViewModel::class.java)
 
         // Set view listener
-        buttonToFirst.setOnClickListener {
-            findNavController().navigate(R.id.action_mainFragment_to_firstFragment)
+        buttonToMain.setOnClickListener {
+            findNavController().navigate(R.id.action_thirdFragment_to_mainFragment)
         }
 
     }
