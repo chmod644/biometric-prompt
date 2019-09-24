@@ -1,2 +1,2 @@
 include ':app'
-rootProject.name='Sandbox'
+rootProject.name='Example Navigation'

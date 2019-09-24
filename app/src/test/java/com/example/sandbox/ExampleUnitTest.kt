@@ -1,4 +1,4 @@
-package com.example.sandbox
+package com.example.examplenavigation
 
 import org.junit.Test
 

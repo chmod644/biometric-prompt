@@ -1,4 +1,4 @@
-package com.example.sandbox.ui.main
+package com.example.examplenavigation.ui.main
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
-import com.example.sandbox.R
+import com.example.examplenavigation.R
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment() {
