@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.examplenavigation.ui.main.MainFragment"
+        android:name="com.example.exampleforegroundservice.ui.main.MainFragment"
         android:label="main_fragment"
         tools:layout="@layout/main_fragment" >
         <action
@@ -16,7 +16,7 @@
     </fragment>
     <fragment
         android:id="@+id/firstFragment"
-        android:name="com.example.examplenavigation.ui.main.FirstFragment"
+        android:name="com.example.exampleforegroundservice.ui.main.FirstFragment"
         android:label="first_fragment"
         tools:layout="@layout/first_fragment" >
         <action
@@ -25,7 +25,7 @@
     </fragment>
     <fragment
         android:id="@+id/secondFragment"
-        android:name="com.example.examplenavigation.ui.main.SecondFragment"
+        android:name="com.example.exampleforegroundservice.ui.main.SecondFragment"
         android:label="second_fragment"
         tools:layout="@layout/second_fragment" >
         <action
@@ -34,7 +34,7 @@
     </fragment>
     <fragment
         android:id="@+id/thirdFragment"
-        android:name="com.example.examplenavigation.ui.main.ThirdFragment"
+        android:name="com.example.exampleforegroundservice.ui.main.ThirdFragment"
         android:label="third_fragment"
         tools:layout="@layout/third_fragment" >
         <action

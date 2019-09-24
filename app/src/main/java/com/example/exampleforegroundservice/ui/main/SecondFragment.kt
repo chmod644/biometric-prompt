@@ -1,4 +1,4 @@
-package com.example.examplenavigation.ui.main
+package com.example.exampleforegroundservice.ui.main
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -8,7 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 
-import com.example.examplenavigation.R
+import com.example.exampleforegroundservice.R
 import kotlinx.android.synthetic.main.first_fragment.*
 import kotlinx.android.synthetic.main.second_fragment.*
 

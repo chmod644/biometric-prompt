@@ -1,4 +1,4 @@
-package com.example.examplenavigation
+package com.example.exampleforegroundservice
 
 import org.junit.Test
 

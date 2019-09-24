@@ -1,4 +1,4 @@
-package com.example.examplenavigation.ui.main
+package com.example.exampleforegroundservice.ui.main
 
 import androidx.lifecycle.ViewModel
 
