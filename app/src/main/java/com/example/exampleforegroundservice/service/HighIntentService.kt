@@ -8,12 +8,10 @@ import android.os.Build
 import android.widget.Toast
 import androidx.annotation.RequiresApi
 import androidx.core.app.NotificationCompat
-import androidx.core.app.NotificationManagerCompat
-import com.example.exampleforegroundservice.MainActivity
 import com.example.exampleforegroundservice.R
 
-class SimpleIntentService: IntentService("SimpleIntentService") {
-    val notificationId = 42
+class HighIntentService: IntentService("HighIntentService") {
+    val notificationId = 103
     var notificationBuilder: NotificationCompat.Builder? = null
 
     override fun onHandleIntent(intent: Intent?) {
@@ -30,8 +28,8 @@ class SimpleIntentService: IntentService("SimpleIntentService") {
 
         val id =
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
-                val id = "channle_simple_upload"
-                val name = getString(R.string.notify_name)
+                val id = "channel_high_upload"
+                val name = "High Notification"
                 val notifyDescription = getString(R.string.notify_description)
                 createNotificationChannel(id, name, notifyDescription)
             } else {
@@ -58,7 +56,7 @@ class SimpleIntentService: IntentService("SimpleIntentService") {
     private fun createNotificationChannel(id: String, name: String, desc: String): String {
         val manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
         if (manager.getNotificationChannel(id) == null) {
-            val mChannel = NotificationChannel(id, name, NotificationManager.IMPORTANCE_LOW)
+            val mChannel = NotificationChannel(id, name, NotificationManager.IMPORTANCE_HIGH)
             mChannel.apply {
                 description = desc
             }

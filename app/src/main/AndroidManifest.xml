@@ -20,7 +20,19 @@
         </activity>
         <service
             android:name=".service.SimpleIntentService"
-            android:label="@string/uploading_data"
+            android:exported="false"
+            />
+        <service
+            android:name=".service.LowIntentService"
+            android:exported="false"
+            />
+        <service
+            android:name=".service.DefaultIntentService"
+            android:exported="false"
+            />
+        <service
+            android:name=".service.HighIntentService"
+            android:exported="false"
             />
     </application>
 

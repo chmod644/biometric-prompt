@@ -1,7 +1,5 @@
 package com.example.exampleforegroundservice.ui.main
 
-import android.app.Notification
-import android.app.PendingIntent
 import android.content.Intent
 import android.os.Build
 import androidx.lifecycle.ViewModelProviders
@@ -10,10 +8,11 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.fragment.findNavController
-import com.example.exampleforegroundservice.MainActivity
 import com.example.exampleforegroundservice.R
 import com.example.exampleforegroundservice.service.SimpleIntentService
+import com.example.exampleforegroundservice.service.DefaultIntentService
+import com.example.exampleforegroundservice.service.HighIntentService
+import com.example.exampleforegroundservice.service.LowIntentService
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment() {
@@ -46,6 +45,33 @@ class MainFragment : Fragment() {
             }
         }
 
+        buttonDataUploadLow.setOnClickListener {
+            Intent(requireContext(), LowIntentService::class.java).also { intent ->
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    requireActivity().startForegroundService(intent)
+                } else {
+                    requireActivity().startService(intent)
+                }
+            }
+        }
+        buttonDataUploadDefault.setOnClickListener {
+            Intent(requireContext(), DefaultIntentService::class.java).also { intent ->
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    requireActivity().startForegroundService(intent)
+                } else {
+                    requireActivity().startService(intent)
+                }
+            }
+        }
+        buttonDataUploadHigh.setOnClickListener {
+            Intent(requireContext(), HighIntentService::class.java).also { intent ->
+                if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O) {
+                    requireActivity().startForegroundService(intent)
+                } else {
+                    requireActivity().startService(intent)
+                }
+            }
+        }
     }
 
 }
