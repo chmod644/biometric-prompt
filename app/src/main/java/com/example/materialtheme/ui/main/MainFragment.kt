@@ -6,6 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.navigation.findNavController
+import androidx.navigation.fragment.findNavController
 import com.example.materialtheme.R
 import kotlinx.android.synthetic.main.main_fragment.*
 
@@ -29,6 +31,7 @@ class MainFragment : Fragment() {
         viewModel = ViewModelProviders.of(this).get(MainViewModel::class.java)
 
         buttonToForm.setOnClickListener {
+            findNavController().navigate(R.id.action_mainFragment_to_formFragment)
         }
     }
 

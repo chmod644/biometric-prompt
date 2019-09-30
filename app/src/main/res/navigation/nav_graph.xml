@@ -8,7 +8,22 @@
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.materialtheme.ui.main.MainFragment"
-        android:label="main_fragment"
+        android:label="Main"
         tools:layout="@layout/main_fragment" >
+        <action
+            android:id="@+id/action_mainFragment_to_formFragment"
+            app:destination="@id/formFragment" />
     </fragment>
+
+    <fragment
+        android:id="@+id/shoppingFragment"
+        android:name="com.example.materialtheme.ui.main.ShoppingFragment"
+        android:label="Shopping"
+        tools:layout="@layout/shopping_fragment" >
+    </fragment>
+    <fragment
+        android:id="@+id/formFragment"
+        android:name="com.example.materialtheme.ui.main.FormFragment"
+        android:label="Form"
+        tools:layout="@layout/form_fragment" />
 </navigation>
