@@ -1,14 +1,102 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout
+<LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="16dp"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
     tools:context=".ui.main.FormFragment">
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Hello" />
+        android:id="@+id/text_plain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Plain text"
+        android:layout_margin="8dp"
+        />
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+    <TextView
+        android:id="@+id/text_body1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body1 text"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:layout_margin="8dp"
+        />
+
+    <TextView
+        android:id="@+id/text_body2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Body2 text"
+        android:textAppearance="?attr/textAppearanceBody2"
+        android:layout_margin="8dp"
+        />
+
+    <TextView
+        android:id="@+id/text_accent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Accent text"
+        android:textColor="?android:attr/colorAccent"
+        android:layout_margin="8dp"
+        />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/button_ex_fab"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:text="Extended FAB" />
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/buttonCaseDetail"
+        style="@style/Widget.MaterialComponents.ExtendedFloatingActionButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        app:icon="@drawable/ic_shopping_cart_black_24dp"
+        android:text="Extended FAB w/ Icon" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="?textInputStyle"
+        android:id="@+id/text_input_layout_filled"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        >
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/text_input_edit_text_filled"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Label" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <RadioGroup
+        android:id="@+id/radio_group"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="8dp"
+        >
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_button_one"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true" />
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/radio_button_two"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RadioGroup>
+
+</LinearLayout>
