@@ -1,8 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.exampleforegroundservice">
-
-    <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
+    package="com.example.materialtheme">
 
     <application
         android:allowBackup="true"
@@ -11,29 +9,13 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme.NoActionBar">
-        <activity android:name=".MainActivity">
+        <activity android:name="com.example.materialtheme.MainActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <service
-            android:name=".service.SimpleIntentService"
-            android:exported="false"
-            />
-        <service
-            android:name=".service.LowIntentService"
-            android:exported="false"
-            />
-        <service
-            android:name=".service.DefaultIntentService"
-            android:exported="false"
-            />
-        <service
-            android:name=".service.HighIntentService"
-            android:exported="false"
-            />
     </application>
 
 </manifest>

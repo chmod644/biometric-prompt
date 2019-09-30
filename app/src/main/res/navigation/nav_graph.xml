@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/mainFragment"
-        android:name="com.example.exampleforegroundservice.ui.main.MainFragment"
+        android:name="com.example.materialtheme.ui.main.MainFragment"
         android:label="main_fragment"
         tools:layout="@layout/main_fragment" >
     </fragment>

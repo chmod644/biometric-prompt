@@ -1,4 +1,4 @@
-package com.example.exampleforegroundservice
+package com.example.materialtheme
 
 import org.junit.Test
 
