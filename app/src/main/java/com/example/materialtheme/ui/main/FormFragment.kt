@@ -8,6 +8,8 @@ import android.view.View
 import android.view.ViewGroup
 
 import com.example.materialtheme.R
+import com.google.android.material.dialog.MaterialAlertDialogBuilder
+import kotlinx.android.synthetic.main.form_fragment.*
 
 class FormFragment : Fragment() {
 
@@ -27,7 +29,17 @@ class FormFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         viewModel = ViewModelProviders.of(this).get(FormViewModel::class.java)
-        // TODO: Use the ViewModel
+
+        button_show_dialog.setOnClickListener {
+            MaterialAlertDialogBuilder(context)
+                .setTitle("Warning")
+                .setMessage("this is sample of material alert dialog")
+                .setPositiveButton("Yes", null)
+                .setNegativeButton("No", null)
+                .show()
+            return@setOnClickListener
+
+        }
     }
 
 }
