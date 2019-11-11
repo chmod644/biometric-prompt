@@ -4,4 +4,6 @@
     <string name="title_shopping">Shopping</string>
     <string name="title_settings">Settings</string>
     <string name="biometric_authentication">Biometric Authentication</string>
+    <string name="cancel">Cancel</string>
+    <string name="title_biometric_authentication">Unlock with biometric authenticatoin</string>
 </resources>
