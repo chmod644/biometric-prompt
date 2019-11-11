@@ -1,4 +1,4 @@
-package com.example.materialtheme.ui.main
+package com.example.biometricprompt.ui.main
 
 import androidx.lifecycle.ViewModel
 

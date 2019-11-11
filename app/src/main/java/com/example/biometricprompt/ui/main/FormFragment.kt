@@ -1,4 +1,4 @@
-package com.example.materialtheme.ui.main
+package com.example.biometricprompt.ui.main
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 
-import com.example.materialtheme.R
+import com.example.biometricprompt.R
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import kotlinx.android.synthetic.main.form_fragment.*
 

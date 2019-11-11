@@ -1,4 +1,4 @@
-package com.example.materialtheme
+package com.example.biometricprompt
 
 import androidx.test.platform.app.InstrumentationRegistry
 import androidx.test.runner.AndroidJUnit4

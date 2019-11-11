@@ -1,4 +1,4 @@
-package com.example.materialtheme.ui.main
+package com.example.biometricprompt.ui.main
 
 import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
@@ -6,9 +6,8 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.navigation.findNavController
 import androidx.navigation.fragment.findNavController
-import com.example.materialtheme.R
+import com.example.biometricprompt.R
 import kotlinx.android.synthetic.main.main_fragment.*
 
 class MainFragment : Fragment() {
