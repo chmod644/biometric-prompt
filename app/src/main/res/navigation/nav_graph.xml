@@ -3,8 +3,17 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/mainFragment">
+    app:startDestination="@id/startFragment">
 
+    <fragment
+        android:id="@+id/startFragment"
+        android:name="com.example.biometricprompt.ui.main.StartFragment"
+        android:label="start_fragment"
+        tools:layout="@layout/start_fragment" >
+        <action
+            android:id="@+id/action_startFragment_to_mainFragment"
+            app:destination="@id/mainFragment" />
+    </fragment>
     <fragment
         android:id="@+id/mainFragment"
         android:name="com.example.biometricprompt.ui.main.MainFragment"
