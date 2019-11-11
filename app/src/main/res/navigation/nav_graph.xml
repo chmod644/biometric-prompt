@@ -8,7 +8,7 @@
     <fragment
         android:id="@+id/startFragment"
         android:name="com.example.biometricprompt.ui.main.StartFragment"
-        android:label="start_fragment"
+        android:label="Authentication"
         tools:layout="@layout/start_fragment" >
         <action
             android:id="@+id/action_startFragment_to_mainFragment"
