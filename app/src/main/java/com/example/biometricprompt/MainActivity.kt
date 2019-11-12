@@ -17,7 +17,7 @@ class MainActivity : AppCompatActivity() {
         // Setup Toolbar
         val toolbar = toolbar as Toolbar
         val navController = findNavController(R.id.nav_host_fragment)
-        val appBarConfiguration = AppBarConfiguration(setOf(R.id.mainFragment))
+        val appBarConfiguration = AppBarConfiguration(setOf(R.id.startFragment, R.id.mainFragment))
         toolbar.setupWithNavController(navController, appBarConfiguration)
     }
 }
