@@ -57,7 +57,7 @@ class StartFragment : Fragment() {
         return when (biometricManager.canAuthenticate()) {
             BiometricManager.BIOMETRIC_SUCCESS -> CanAuthenticate.SUCCESS
             BiometricManager.BIOMETRIC_ERROR_NO_HARDWARE -> CanAuthenticate.ERROR_AUTHENTICATION_SYSTEM
-            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE -> CanAuthenticate.ERROR_NO_AUTHENTICATION
+            BiometricManager.BIOMETRIC_ERROR_HW_UNAVAILABLE,
             BiometricManager.BIOMETRIC_ERROR_NONE_ENROLLED -> CanAuthenticate.ERROR_NO_AUTHENTICATION
             else -> CanAuthenticate.ERROR_AUTHENTICATION_SYSTEM
         }
@@ -85,19 +85,23 @@ class StartFragment : Fragment() {
             object: BiometricPrompt.AuthenticationCallback() {
                 override fun onAuthenticationError(errorCode: Int, errString: CharSequence) {
                     val isAuthenticated = when (errorCode) {
-                        BiometricPrompt.ERROR_HW_UNAVAILABLE -> IsAuthenticated.ERROR_AUTHENTICATION_SYSTEM
-                        BiometricPrompt.ERROR_UNABLE_TO_PROCESS -> IsAuthenticated.ERROR_AUTHENTICATION_SYSTEM
-                        BiometricPrompt.ERROR_TIMEOUT -> IsAuthenticated.ERROR_AUTHENTICATION_SYSTEM
-                        BiometricPrompt.ERROR_NO_SPACE -> IsAuthenticated.ERROR_AUTHENTICATION_SYSTEM
-                        BiometricPrompt.ERROR_CANCELED -> IsAuthenticated.ERROR_AUTHENTICATION_SYSTEM
-                        BiometricPrompt.ERROR_LOCKOUT -> IsAuthenticated.ERROR_AUTHENTICATION_USER
-                        BiometricPrompt.ERROR_VENDOR -> IsAuthenticated.ERROR_AUTHENTICATION_SYSTEM
-                        BiometricPrompt.ERROR_LOCKOUT_PERMANENT -> IsAuthenticated.ERROR_AUTHENTICATION_USER
-                        BiometricPrompt.ERROR_USER_CANCELED -> IsAuthenticated.CANCELED
-                        BiometricPrompt.ERROR_NO_BIOMETRICS -> IsAuthenticated.ERROR_NO_AUTHENTICATION
-                        BiometricPrompt.ERROR_HW_NOT_PRESENT -> IsAuthenticated.ERROR_NO_AUTHENTICATION
-                        BiometricPrompt.ERROR_NEGATIVE_BUTTON -> IsAuthenticated.CANCELED
-                        BiometricPrompt.ERROR_NO_DEVICE_CREDENTIAL -> IsAuthenticated.ERROR_NO_AUTHENTICATION
+                        BiometricPrompt.ERROR_HW_UNAVAILABLE,
+                        BiometricPrompt.ERROR_UNABLE_TO_PROCESS,
+                        BiometricPrompt.ERROR_TIMEOUT,
+                        BiometricPrompt.ERROR_NO_SPACE,
+                        BiometricPrompt.ERROR_CANCELED,
+                        BiometricPrompt.ERROR_VENDOR
+                        -> IsAuthenticated.ERROR_AUTHENTICATION_SYSTEM
+                        BiometricPrompt.ERROR_LOCKOUT,
+                        BiometricPrompt.ERROR_LOCKOUT_PERMANENT
+                        -> IsAuthenticated.ERROR_AUTHENTICATION_USER
+                        BiometricPrompt.ERROR_USER_CANCELED,
+                        BiometricPrompt.ERROR_NEGATIVE_BUTTON
+                        -> IsAuthenticated.CANCELED
+                        BiometricPrompt.ERROR_NO_BIOMETRICS,
+                        BiometricPrompt.ERROR_HW_NOT_PRESENT,
+                        BiometricPrompt.ERROR_NO_DEVICE_CREDENTIAL
+                        -> IsAuthenticated.ERROR_NO_AUTHENTICATION
                         else -> IsAuthenticated.ERROR_AUTHENTICATION_SYSTEM
                     }
                     showSnackbar(isAuthenticated.message)
