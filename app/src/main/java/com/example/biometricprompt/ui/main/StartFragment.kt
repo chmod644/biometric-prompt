@@ -1,15 +1,17 @@
 package com.example.biometricprompt.ui.main
 
-import android.os.*
-import androidx.biometric.BiometricPrompt
-import androidx.lifecycle.ViewModelProviders
-import androidx.fragment.app.Fragment
+import android.os.Build
+import android.os.Bundle
+import android.os.Handler
+import android.os.Looper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.biometric.BiometricManager
+import androidx.biometric.BiometricPrompt
+import androidx.fragment.app.Fragment
+import androidx.lifecycle.ViewModelProviders
 import androidx.navigation.fragment.findNavController
-
 import com.example.biometricprompt.R
 import com.google.android.material.snackbar.Snackbar
 import kotlinx.android.synthetic.main.start_fragment.*
